@@ -16,6 +16,11 @@ const App = () => {
     setLink(e.target.value);
   };
 
+  const copiou = (e) => {
+    e.currentTarget.classList.add("text-white");
+    toast.success("Link Copiado! 😃");
+  };
+
   const encurtaLink = async () => {
     try {
       const response = await fetch(`${API}${link}`);
@@ -30,10 +35,12 @@ const App = () => {
   return (
     <div className="flex justify-between ">
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <h1 className="mb-10 text-5xl">Encurte seu link!</h1>
+        <h1 className="mb-10 text-5xl font-bold text-teal-100">
+          Encurte seu link!
+        </h1>
         <div className="flex w-2/3  items-center justify-center mb-6 ">
           <input
-            className="bg-black text-white  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
+            className="bg-blue-100 text-black  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
             type="text"
             placeholder="Insira o link que você quer encurtar!"
             value={link}
@@ -42,20 +49,23 @@ const App = () => {
           />
           <AiFillRightSquare
             onClick={encurtaLink}
-            className="text-6xl  hover:cursor-pointer  "
+            className="text-6xl  hover:cursor-pointer  text-blue-200 "
           />
         </div>
 
-        <p className="border-b-2 border-blue-200 flex text-lg items-center">
+        <p className="border-b-2 border-blue-400 flex text-lg items-center">
           {linkCurto === "" ? (
             <p className="text-3xl">O link aparecera aqui!</p>
           ) : (
             <CopyToClipboard text={linkCurto}>
-              <div className="hover:cursor-pointer flex justify-center items-center active:text-white transform duration-100 ease-in-out">
+              <div
+                onClick={copiou}
+                className="hover:cursor-pointer flex justify-center items-center transform duration-100 ease-in-out"
+              >
                 <p className="text-3xl hover:cursor-pointer py-2 px-3 ">
                   {linkCurto}
                 </p>
-                <CgCopy className="ml-3 text-3xl" />
+                <CgCopy className="ml-3 text-3xl " />
                 {""}
               </div>
             </CopyToClipboard>
