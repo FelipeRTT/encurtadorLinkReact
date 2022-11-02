@@ -34,11 +34,20 @@ const App = () => {
   };
 
   return (
-    <div className="flex justify-between ">
+    <div className="flex justify-between  ">
+      <header className="flex items-center justify-center absolute w-full">
+        <img
+          src="./src/assets/link.png"
+          alt=""
+          className="w-10 mr-1 text-white "
+        />
+        <h1 className="logo text-white text-5xl ">Encurtai</h1>
+      </header>
       <div className="flex flex-col items-center justify-center h-screen w-full">
         <h1 className="mb-10 text-5xl font-bold text-teal-100">
           Encurte seu link!
         </h1>
+
         <div className="flex w-2/3  items-center justify-center mb-6 ">
           <input
             className="text-bold bg-blue-100 text-black  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
