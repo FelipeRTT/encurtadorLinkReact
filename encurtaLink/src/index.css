@@ -6,6 +6,8 @@
 
 * {
   font-family: griffy;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {

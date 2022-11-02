@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const App = () => {
   const [link, setLink] = useState("");
@@ -34,11 +35,15 @@ const App = () => {
   };
 
   return (
-    <div className="flex justify-between  ">
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      className="flex justify-between  "
+    >
       <header className="flex items-center justify-center absolute w-full mt-3">
         <img
           src="./src/assets/link.png"
-          alt=""
+          alt="logo image"
           className="w-10 mr-1 text-white "
         />
         <h1 className="logo text-white text-5xl ">Encurtai</h1>
@@ -108,7 +113,7 @@ const App = () => {
           <AiFillTwitterCircle className="text-5xl" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
