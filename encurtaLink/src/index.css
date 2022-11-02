@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-
 @import url("https://fonts.googleapis.com/css2?family=Griffy&display=swap");
 
 * {
-  font-family: Roboto;
-  /* color: aliceblue; */
+  font-family: griffy;
 }
 
 body {
@@ -19,8 +16,4 @@ body {
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
-}
-
-.logo {
-  font-family: griffy;
 }
