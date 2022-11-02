@@ -6,6 +6,7 @@ import { AiFillRightSquare } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
 
 const App = () => {
   const [link, setLink] = useState("");
@@ -40,7 +41,7 @@ const App = () => {
         </h1>
         <div className="flex w-2/3  items-center justify-center mb-6 ">
           <input
-            className="bg-blue-100 text-black  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
+            className="text-bold bg-blue-100 text-black  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
             type="text"
             placeholder="Insira o link que você quer encurtar!"
             value={link}
@@ -89,6 +90,15 @@ const App = () => {
         theme="dark"
       />
       ;
+      <div className="absolute top-2 right-3 flex gap-3 ">
+        <a href="https://www.github.com/felipertt" target={"_blank"}>
+          <AiFillGithub className=" text-5xl " />
+        </a>
+
+        <a href="https://twitter.com/felipertt1" target={"_blank"}>
+          <AiFillTwitterCircle className="text-5xl" />
+        </a>
+      </div>
     </div>
   );
 };
