@@ -30,7 +30,7 @@ const App = () => {
       setLinkCurto(data.result.short_link);
       toast.success("Sucesso! clique no link para copiar");
     } catch (error) {
-      toast.error("Nao foi possivel encurtar, cheque o link");
+      toast.error("Não foi possivel encurtar, verifique o link");
     }
   };
 
@@ -88,7 +88,7 @@ const App = () => {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <img src={short} alt="" className="w-[450px]  " />
+        <img src={short} alt="imagem decorativa" className="w-[450px]  " />
       </div>
       {/* toast config */}
       <ToastContainer
