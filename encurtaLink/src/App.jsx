@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
-import teste from "./assets/teste.svg";
+import short from "./assets/short.svg";
 import { CgCopy } from "react-icons/cg";
 import { AiFillRightSquare } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
@@ -33,7 +33,7 @@ const App = () => {
         <h1 className="mb-10 text-5xl">Encurte seu link!</h1>
         <div className="flex w-2/3  items-center justify-center mb-6 ">
           <input
-            className="bg-black text-white  px-8 py-4 rounded-xl border border-black w-full "
+            className="bg-black text-white  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
             type="text"
             placeholder="Insira o link que você quer encurtar!"
             value={link}
@@ -63,7 +63,7 @@ const App = () => {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <img src={teste} alt="" className="w-80" />
+        <img src={short} alt="" className="w-[450px] " />
       </div>
       {/* toast config */}
       <ToastContainer
