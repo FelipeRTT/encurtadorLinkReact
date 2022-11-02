@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const copiou = (e) => {
-    e.currentTarget.classList.add("text-white");
+    e.currentTarget.classList.add("text-blue-400");
     toast.success("Link Copiado! 😃");
   };
 
@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div className="flex justify-between  ">
-      <header className="flex items-center justify-center absolute w-full">
+      <header className="flex items-center justify-center absolute w-full mt-3">
         <img
           src="./src/assets/link.png"
           alt=""
@@ -63,7 +63,7 @@ const App = () => {
           />
         </div>
 
-        <p className="border-b-2 border-blue-400 flex text-lg items-center">
+        <p className="border-b-2 border-blue-400 text-blue-200 flex text-lg items-center">
           {linkCurto === "" ? (
             <p className="text-3xl">O link aparecera aqui!</p>
           ) : (
@@ -83,7 +83,7 @@ const App = () => {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <img src={short} alt="" className="w-[450px] " />
+        <img src={short} alt="" className="w-[450px]  " />
       </div>
       {/* toast config */}
       <ToastContainer
@@ -99,7 +99,7 @@ const App = () => {
         theme="dark"
       />
       ;
-      <div className="absolute top-2 right-3 flex gap-3 ">
+      <div className="absolute top-3 right-3 flex gap-3 ">
         <a href="https://www.github.com/felipertt" target={"_blank"}>
           <AiFillGithub className=" text-5xl " />
         </a>
