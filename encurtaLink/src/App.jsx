@@ -42,7 +42,7 @@ const App = () => {
     >
       <header className="flex items-center justify-center absolute w-full mt-3">
         <img
-          src="./src/assets/link.png"
+          src="https://cdn-icons-png.flaticon.com/128/3329/3329352.png"
           alt="logo image"
           className="w-10 mr-1 text-white "
         />
