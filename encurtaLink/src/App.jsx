@@ -38,7 +38,7 @@ const App = () => {
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
-      className="flex justify-between  "
+      className="flex justify-between  flex-col md:flex-row"
     >
       <header className="flex items-center justify-center absolute w-full mt-3">
         <img
@@ -46,9 +46,9 @@ const App = () => {
           alt="logo image"
           className="w-10 mr-1 text-white "
         />
-        <h1 className="logo text-white text-5xl ">Encurtai</h1>
+        <h1 className="logo text-white text-3xl ">Encurtai</h1>
       </header>
-      <div className="flex flex-col items-center justify-center h-screen w-full">
+      <div className="flex flex-col items-center justify-center h-screen w-full ">
         <h1 className="mb-10 text-5xl font-bold text-teal-100">
           Encurte seu link!
         </h1>
@@ -57,7 +57,7 @@ const App = () => {
           <input
             className="text-bold bg-blue-100 text-black  px-8 py-4 rounded-xl border border-black w-full shadow-lg "
             type="text"
-            placeholder="Insira o link que você quer encurtar!"
+            placeholder="Insira o link!"
             value={link}
             id="link"
             onChange={changeHandler}
@@ -88,7 +88,11 @@ const App = () => {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center h-screen w-full">
-        <img src={short} alt="imagem decorativa" className="w-[450px]  " />
+        <img
+          src={short}
+          alt="imagem decorativa"
+          className=" w-[280px] lg:w-[400px]  "
+        />
       </div>
       {/* toast config */}
       <ToastContainer
@@ -104,7 +108,7 @@ const App = () => {
         theme="dark"
       />
       ;
-      <div className="absolute top-3 right-3 flex gap-3 ">
+      <div className="absolute  sm:top-3 sm:right-3 bottom-3 right-3 flex justify-self- gap-3 ">
         <a href="https://www.github.com/felipertt" target={"_blank"}>
           <AiFillGithub className=" text-5xl " />
         </a>
