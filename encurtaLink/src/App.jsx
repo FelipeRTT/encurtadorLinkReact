@@ -64,7 +64,7 @@ const App = () => {
           />
           <AiFillRightSquare
             onClick={encurtaLink}
-            className="text-6xl  hover:cursor-pointer  text-blue-200 "
+            className="text-6xl  hover:cursor-pointer  text-blue-200 hover:text-blue-300 active:text-blue-400 "
           />
         </div>
 
